@@ -26,7 +26,10 @@
   (progn
     (setq org-support-shift-select t
           org-journal-dir "c:/Users/n462650/org/journal"
-          org-agenda-files `(,org-journal-dir))))
+          org-agenda-files `(,org-journal-dir))
+    (add-to-list org-agenda-files `(,org-journal-dir))
+    (add-hook 'find-file-hook 'auto-insert)
+    (setq auto-insert-alist '((".*/[0-9]*\\.org$" . mrfroop/journal-file-insert)))))
 
 ;;; Local Variables: ***
 ;;; mode:Emacs-lisp ***

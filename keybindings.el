@@ -21,9 +21,10 @@
 (when (display-graphic-p)
 
   (spacemacs/set-leader-keys
-    "odd" 'mrfroop/insert-time-stamp)
+    "odd" 'mrfroop/insert-time-stamp
+    "odj" 'mrfroop/goto-or-create-todays-jounal)
 )
-
+
 ;;; Local Variables: ***
 ;;; mode:Emacs-lisp ***
 ;;; fill-column: 79 ***
